@@ -1,16 +1,25 @@
-import { FunctionComponent, ReactNode } from "react";
+import { FunctionComponent, HTMLAttributes, ReactNode } from "react";
 import * as Styled from "styles/NavBar/Item.elements";
 
-interface IItem {
+interface IItem extends HTMLAttributes<HTMLLIElement> {
 	icon?: ReactNode;
+	rightIcon?: ReactNode;
 	text?: string;
 }
 
-const Item: FunctionComponent<IItem> = ({ icon, text }: IItem) => {
+const Item: FunctionComponent<IItem> = ({
+	icon,
+	text,
+	rightIcon,
+	...props
+}: IItem) => {
 	return (
-		<Styled.Wrapper>
-			{icon}
-			<p>{text}</p>
+		<Styled.Wrapper {...props}>
+			<Styled.Row>
+				{icon}
+				<p>{text}</p>
+			</Styled.Row>
+			{rightIcon}
 		</Styled.Wrapper>
 	);
 };

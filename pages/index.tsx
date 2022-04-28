@@ -1,11 +1,11 @@
-import { NavBar } from "components";
+import { TopBar } from "components";
 import type { NextPage } from "next";
 import * as Shared from "styles/shared/Main.elements";
 
 const Home: NextPage = () => {
 	return (
 		<Shared.Layout>
-			<NavBar />
+			<TopBar />
 		</Shared.Layout>
 	);
 };

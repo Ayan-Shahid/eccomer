@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
+export const Aside = styled.aside`
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+`;
+
 export const Wrapper = styled.article`
 	display: flex;
 	align-items: center;
 	padding: 0 0.7rem;
-	gap: 0.7rem;
 	background: none;
 	flex: none;
 	transition: ease-in-out 0.3s;
@@ -17,16 +22,13 @@ export const Wrapper = styled.article`
 	&:hover {
 		background: ${({ theme: { colors } }) => colors.dark[100]};
 	}
+	& > ${Aside} {
+		margin-left: 0.7rem;
+	}
 `;
 
 export const Body = styled.p`
 	font-size: ${({ theme: { fonts } }) => fonts.body[2]};
-`;
-
-export const Aside = styled.aside`
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
 `;
 
 export const Label = styled.p`
