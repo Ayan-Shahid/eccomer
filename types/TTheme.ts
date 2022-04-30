@@ -13,6 +13,7 @@ type TTheme = {
 		light: Color;
 		error: Color;
 		success: Color;
+		warning: Color;
 	};
 	fonts: {
 		heading: {

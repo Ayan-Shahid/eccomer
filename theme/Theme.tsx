@@ -28,6 +28,13 @@ const theme: DefaultTheme = {
 			400: "#FF99B1",
 			500: "#FFCCD8",
 		},
+		warning: {
+			100: "#D4FF00",
+			200: "#DDFF33",
+			300: "#E5FF66",
+			400: "#EEFF99",
+			500: "#F7FFCC",
+		},
 		light: {
 			100: "#efefef",
 			200: "#eaeaea",

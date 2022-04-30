@@ -4,8 +4,11 @@ export const Wrapper = styled.header`
 	width: 100%;
 	display: flex;
 	height: fit-content;
+	padding: 1rem;
 	justify-content: space-between;
 	align-items: center;
+	grid-column: 2 / 3;
+	grid-row: 0 / 1;
 `;
 
 export const Icon = styled.article`
@@ -19,9 +22,15 @@ export const Icon = styled.article`
 	cursor: pointer;
 	&:hover {
 		transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-webkit-transform: scale(1.2);
 	}
 	&:active {
 		transform: scale(1);
+		-ms-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-webkit-transform: scale(1.2);
 	}
 `;
 
