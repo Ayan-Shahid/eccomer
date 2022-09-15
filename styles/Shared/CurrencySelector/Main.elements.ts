@@ -10,6 +10,9 @@ export const Currency = styled.p`
 	line-height: 0;
 	font-size: ${({ theme: { fonts } }) => fonts.base};
 	flex: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;
 
 export const Flag = styled.figure`
@@ -22,6 +25,11 @@ export const Flag = styled.figure`
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
+
+	@media screen and (max-width: 740px) {
+		width: 1.8rem;
+		height: 1.8rem;
+	}
 
 	background: ${({ theme: { colors } }) => colors.primary[200]};
 	margin: 0;
@@ -46,9 +54,13 @@ export const DropDown = styled.article<DropDownProps>`
 	}
 	transition: 0.3s ease-in;
 	opacity: ${({ active }) => (active === "true" ? "1" : "0")};
-	height: 15rem;
+	z-index: ${({ active }) => (active === "true" ? 20 : -10)};
+	height: ${({ active }) => (active === "true" ? "15rem" : "")};
 	width: 25rem;
 	position: absolute;
+	@media screen and (max-width: 740px) {
+		width: 15rem;
+	}
 	overflow-y: scroll;
 	scrollbar-width: none;
 	&::-webkit-scrollbar {
@@ -87,5 +99,9 @@ export const DropDownItem = styled.article`
 		background: ${({ theme: { colors } }) => colors.primary[300]};
 		width: 2.5rem;
 		height: 2.5rem;
+		@media screen and (max-width: 740px) {
+			width: 1.8rem;
+			height: 1.8rem;
+		}
 	}
 `;

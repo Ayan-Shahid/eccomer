@@ -6,6 +6,9 @@ export const Text = styled.h6`
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	font-weight: 300;
 	user-select: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.md};
+	}
 `;
 
 export const Item = styled.th`

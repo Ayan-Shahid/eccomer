@@ -4,6 +4,9 @@ export const Heading = styled.h4`
 	font-size: ${({ theme: { fonts } }) => fonts.xl};
 	margin: 0;
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.lg};
+	}
 `;
 
 export const Main = styled.section`
@@ -19,6 +22,9 @@ export const Text = styled.p`
 	margin: 0;
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	line-height: 0;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;
 
 export const UploadNewButton = styled.button`
@@ -37,6 +43,10 @@ export const UploadNewButton = styled.button`
 		height: 1rem;
 		margin-right: 0.5rem;
 		color: ${({ theme: { colors } }) => colors.tertiary[100]};
+		@media screen and (max-width: 740px) {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
 	}
 	&:hover {
 		background: ${({ theme: { colors } }) => colors.success[400]};

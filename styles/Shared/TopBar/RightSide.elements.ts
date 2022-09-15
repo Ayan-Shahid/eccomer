@@ -8,6 +8,13 @@ export const Wrapper = styled.article`
 		margin-right: 0.5rem;
 		background: ${({ theme: { colors } }) => colors.primary[100]};
 		cursor: pointer;
+		@media screen and (max-width: 740px) {
+			width: 1.8rem;
+			height: 1.8rem;
+		}
+		@media screen and (max-width: 500px) {
+			display: none;
+		}
 	}
 	.drop-down {
 		right: 0.7rem;
@@ -37,10 +44,16 @@ export const Cart = styled.button`
 		background: ${({ theme: { colors } }) => colors.primary[100]};
 	}
 
-	/* .cart-icon {
-		width: 2rem;
-		height: 2rem;
-	} */
+	.cart-icon {
+		width: 1.4rem;
+		height: 1.4rem;
+	}
+	@media screen and (max-width: 740px) {
+		.cart-icon {
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+	}
 `;
 export const CartCounter = styled.span`
 	border-radius: 50%;
@@ -49,6 +62,10 @@ export const CartCounter = styled.span`
 	top: 0rem;
 	width: 1rem;
 	height: 1rem;
+	@media screen and (max-width: 740px) {
+		width: 0.8rem;
+		height: 0.8rem;
+	}
 	position: absolute;
 	align-items: center;
 
@@ -58,4 +75,7 @@ export const CartCounter = styled.span`
 	font-weight: 300;
 	line-height: 0;
 	font-size: ${({ theme: { fonts } }) => fonts.xs};
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts["2xs"]};
+	}
 `;

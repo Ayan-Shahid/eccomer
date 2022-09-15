@@ -32,6 +32,10 @@ export const Figure = styled.figure`
 	flex: none;
 	margin-right: 0.7rem;
 	border-radius: 0.3rem;
+	@media screen and (max-width: 740px) {
+		width: 2rem;
+		height: 2rem;
+	}
 `;
 
 export const Picture = styled(Image)`
@@ -53,4 +57,7 @@ export const Text = styled.p`
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	font-weight: 700;
 	user-select: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;

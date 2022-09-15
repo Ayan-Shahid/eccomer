@@ -22,6 +22,10 @@ export const Spinner = styled.span`
 	width: 1rem;
 	right: 50%;
 	height: 1rem;
+	@media screen and (max-width: 740px) {
+		height: 0.8rem;
+		width: 0.8rem;
+	}
 	flex: none;
 	position: absolute;
 	&.default,
@@ -45,6 +49,9 @@ export const Text = styled.p`
 	font-weight: 300;
 
 	user-select: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;
 
 export const StripeInput = styled.button`
@@ -92,9 +99,16 @@ export const Button = styled.button`
 		transition: 0.3s ease-in-out;
 		stroke: ${({ theme: { colors } }) => colors.tertiary[100]};
 		fill: transparent;
+		@media screen and (max-width: 740px) {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
 	}
 	.checkout-icon {
 		right: 60%;
+		@media screen and (max-width: 740px) {
+			right: 55%;
+		}
 	}
 	.checkout-icon.processing,
 	.checkout-icon.success,
@@ -122,6 +136,9 @@ export const Button = styled.button`
 		font-size: ${({ theme: { fonts } }) => fonts.base};
 		line-height: 0;
 		transition: 0.3s ease-in-out;
+		@media screen and (max-width: 740px) {
+			font-size: ${({ theme: { fonts } }) => fonts.sm};
+		}
 		&.processing,
 		&.success,
 		&.failed {

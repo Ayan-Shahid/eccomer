@@ -6,6 +6,9 @@ export const Text = styled.p`
 	font-weight: 700;
 	margin: 0;
 	text-align: start;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.base};
+	}
 `;
 
 export const Caption = styled.figcaption`
@@ -38,6 +41,9 @@ export const Label = styled(Text)`
 	font-weight: 300;
 	word-break: break-all;
 	margin-top: 0.5rem;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;
 
 export const Wrapper = styled.article`
@@ -69,6 +75,10 @@ export const Button = styled.button`
 		height: 1rem;
 		transition: 0.3s ease-in-out;
 		margin-right: 0.5rem;
+		@media screen and (max-width: 740px) {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
 	}
 	& > ${Label} {
 		font-weight: 500;
@@ -96,5 +106,11 @@ export const Rating = styled.article`
 	.rating-icon:nth-child(2) {
 		fill: ${({ theme: { colors } }) => colors.warning[300]};
 		stroke: ${({ theme: { colors } }) => colors.warning[300]};
+	}
+	@media screen and (max-width: 740px) {
+		.rating-icon {
+			width: 0.6rem;
+			height: 0.6rem;
+		}
 	}
 `;

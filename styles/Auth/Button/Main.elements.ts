@@ -16,6 +16,9 @@ export const Text = styled.p`
 	font-size: ${({ theme: { fonts } }) => fonts.base};
 	margin: 0;
 	transition: 0.3s ease-in-out;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;
 
 export const Spinner = styled.span`
@@ -30,6 +33,10 @@ export const Spinner = styled.span`
 	height: 1rem;
 	flex: none;
 	position: absolute;
+	@media screen and (max-width: 740px) {
+		width: 0.8rem;
+		height: 0.8rem;
+	}
 `;
 
 export const Button = styled.button`
@@ -70,6 +77,10 @@ export const Button = styled.button`
 		color: ${({ theme: { colors } }) => colors.tertiary[100]};
 		position: absolute;
 		transition: 0.3s ease-in-out;
+		@media screen and (max-width: 740px) {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
 	}
 
 	${Spinner}.authenticating {

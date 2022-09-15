@@ -23,6 +23,10 @@ export const Button = styled.button`
 	.return-icon {
 		width: 2rem;
 		height: 2rem;
+		@media screen and (max-width: 740px) {
+			width: 1.6rem;
+			height: 1.6rem;
+		}
 	}
 `;
 
@@ -32,4 +36,7 @@ export const Heading = styled.h4`
 	margin: 0;
 	user-select: none;
 	margin-left: 1rem;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.xl};
+	}
 `;

@@ -7,6 +7,9 @@ export const Label = styled.p`
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	font-weight: 300;
 	width: 100%;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.base};
+	}
 `;
 
 export const Row = styled.article`
@@ -84,4 +87,7 @@ export const Text = styled.p`
 	margin: 0;
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	line-height: 0;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;

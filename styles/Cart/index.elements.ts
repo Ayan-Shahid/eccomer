@@ -4,6 +4,9 @@ export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	@media screen and (max-width: 740px) {
+		height: 100%;
+	}
 `;
 
 export const Main = styled.main`
@@ -14,6 +17,10 @@ export const Main = styled.main`
 	margin-bottom: 2rem;
 	position: relative;
 	overflow: hidden;
+	@media screen and (max-width: 740px) {
+		flex-direction: column;
+		margin: 2rem 0;
+	}
 `;
 
 export const PaymentSuccess = styled.article`
@@ -64,4 +71,7 @@ export const Text = styled.p`
 	text-align: center;
 	width: 10rem;
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.lg};
+	}
 `;

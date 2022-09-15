@@ -6,17 +6,15 @@ import * as Styled from "styles/Shared/SideBar/Main.elements";
 import * as Shared from "styles/Shared/Loaders/Skeletons.elements";
 
 import { Avatar } from "..";
+import Image from "next/image";
 
 const Main: FunctionComponent = () => {
 	return (
 		<Styled.Wrapper>
 			<Styled.LogoWrapper>
-				<Styled.Logo
-					alt="logo"
-					width="40rem"
-					height="40rem"
-					src="/favicon.ico"
-				/>
+				<Styled.Logo>
+					<Image alt="logo" layout="fill" src="/favicon.ico" />
+				</Styled.Logo>
 				<Styled.LogoText>Eccommer</Styled.LogoText>
 			</Styled.LogoWrapper>
 			<Styled.List>

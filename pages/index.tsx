@@ -7,7 +7,7 @@ import { auth } from "Database/config";
 import { getCountriesAndCities } from "getCountriesAndCities";
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as Styled from "styles/Home/index.elements";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -31,6 +31,7 @@ const Home: NextPage<InferGetStaticPropsType<GetStaticProps>> = ({
 	exchangeRates,
 }) => {
 	const { dispatch } = useContext(Context);
+	const [category, setCategory] = useState<string>("Electronics");
 	useEffect(() => {
 		let isMounted = true;
 		if (isMounted)
@@ -54,8 +55,8 @@ const Home: NextPage<InferGetStaticPropsType<GetStaticProps>> = ({
 					<SideBar />
 					<Styled.Main>
 						<TopBar currenciesList={countries || null} />
-						<Filters />
-						<List />
+						<Filters setCategory={setCategory} />
+						<List category={category} />
 					</Styled.Main>
 				</Styled.Wrapper>
 			) : (

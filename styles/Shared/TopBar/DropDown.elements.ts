@@ -10,6 +10,9 @@ export const Item = styled.button`
 	font-size: ${({ theme: { fonts } }) => fonts.base};
 	border: none;
 	background: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 	cursor: pointer;
 	&:hover {
 		background: ${({ theme: { colors } }) => colors.primary[300]};
@@ -24,6 +27,10 @@ export const Item = styled.button`
 		width: 1rem;
 		height: 1rem;
 		color: ${({ theme: { colors } }) => colors.tertiary[300]};
+		@media screen and (max-width: 740px) {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
 	}
 	.text {
 		margin: 0;

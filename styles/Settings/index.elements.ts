@@ -10,5 +10,10 @@ export const Main = styled.div`
 	height: 100%;
 	width: 100%;
 	flex-direction: column;
-	overflow: hidden;
+	overflow: auto;
+	scrollbar-width: none;
+	overflow-x: hidden;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 `;

@@ -7,10 +7,13 @@ export const Wrapper = styled.article`
 	position: relative;
 
 	.search-icon {
-		width: 1.3rem;
-		height: 1.3rem;
+		width: 1.2rem;
+		height: 1.2rem;
 		color: ${({ theme: { colors } }) => colors.tertiary[100]};
-
+		@media screen and (max-width: 740px) {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
 		position: absolute;
 		left: 0.8rem;
 	}
@@ -22,6 +25,9 @@ export const Input = styled.input`
 	font-size: ${({ theme: { fonts } }) => fonts.base};
 	border-radius: 0.5rem;
 	flex: 1;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 	font-weight: 300;
 	transition: 0.3s ease-in-out;
 	border: 0.1rem solid transparent;

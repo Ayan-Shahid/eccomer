@@ -59,6 +59,10 @@ export const Selected = styled.button`
 		color: ${({ theme: { colors } }) => colors.primary[100]};
 		width: 1.5rem;
 		height: 1.5rem;
+		@media screen and (max-width: 740px) {
+			width: 1.2rem;
+			height: 1.2rem;
+		}
 	}
 `;
 
@@ -87,4 +91,7 @@ export const Text = styled.p`
 	font-size: ${({ theme: { fonts } }) => fonts.base};
 	font-weight: 300;
 	user-select: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;

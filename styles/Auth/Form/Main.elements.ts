@@ -7,6 +7,15 @@ export const Wrapper = styled.form`
 	flex-direction: column;
 	justify-content: center;
 	padding: 0 10rem;
+	@media screen and (max-width: 1200px) {
+		padding: 0 5rem;
+	}
+	@media screen and (max-width: 740px) {
+		padding: 0 2rem;
+	}
+	@media screen and (max-width: 740px) {
+		padding: 2rem;
+	}
 	.form-input-wrapper,
 	.form-button {
 		margin-top: 2rem;
@@ -22,6 +31,9 @@ export const Wrapper = styled.form`
 		font-size: ${({ theme: { fonts } }) => fonts.base};
 		color: ${({ theme: { colors } }) => colors.tertiary[100]};
 		font-weight: 300;
+		@media screen and (max-width: 740px) {
+			font-size: ${({ theme: { fonts } }) => fonts.sm};
+		}
 	}
 `;
 
@@ -29,6 +41,9 @@ export const Title = styled.h4`
 	font-size: ${({ theme: { fonts } }) => fonts["2xl"]};
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	margin: 0;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.xl};
+	}
 `;
 
 export const Text = styled.p`
@@ -38,6 +53,9 @@ export const Text = styled.p`
 	font-weight: 300;
 	margin-top: 1rem;
 	align-self: center;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;
 
 export const Link = styled.p`
@@ -46,6 +64,9 @@ export const Link = styled.p`
 	color: ${({ theme: { colors } }) => colors.success[300]};
 	font-weight: 700;
 	margin-top: 1rem;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 	cursor: pointer;
 	&:hover {
 		text-decoration: underline;
@@ -65,6 +86,9 @@ export const Button = styled.button`
 	font-weight: 700;
 	display: flex;
 	align-items: center;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 	margin-top: 1rem;
 	.google-icon {
 		width: 1rem;

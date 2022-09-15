@@ -10,6 +10,9 @@ export const Wrapper = styled.figure`
 	margin: 0;
 	display: flex;
 	background: ${({ theme: { colors } }) => colors.primary[500]};
+	@media screen and (max-width: 650px) {
+		display: none;
+	}
 `;
 
 export const Picture = styled(Image)`

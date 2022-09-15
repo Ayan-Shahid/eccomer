@@ -16,6 +16,9 @@ export const ErrorText = styled.p`
 	color: ${({ theme: { colors } }) => colors.error[300]};
 	font-size: ${({ theme: { fonts } }) => fonts.base};
 	margin: 0;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;
 
 export const Input = styled.input`
@@ -30,6 +33,9 @@ export const Input = styled.input`
 	padding-left: 3rem;
 	font-weight: 300;
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 
 	&:invalid ~ .valid-icon {
 		color: ${({ theme: { colors } }) => colors.success[100]};
@@ -85,6 +91,10 @@ export const Wrapper = styled.div`
 		color: ${({ theme: { colors } }) => colors.error[300]};
 		transition: 0.3s ease-in-out;
 		margin-right: 1rem;
+		@media screen and (max-width: 740px) {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
 	}
 	.error-active {
 		display: flex;
@@ -108,6 +118,10 @@ export const InputWrapper = styled.article`
 		color: ${({ theme: { colors } }) => colors.tertiary[100]};
 		margin: 0 1rem;
 		transition: 0.3s ease-in-out;
+		@media screen and (max-width: 740px) {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
 	}
 
 	.right-icon,

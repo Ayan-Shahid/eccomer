@@ -12,6 +12,9 @@ export const Label = styled.p`
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	font-weight: 300;
 	margin-bottom: 0.5rem;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.base};
+	}
 `;
 
 export const TextField = styled.article`
@@ -38,6 +41,9 @@ export const Input = styled.input`
 	font-weight: 300;
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	transition: 0.3s ease-in-out;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 	&::placeholder {
 		color: ${({ theme: { colors } }) => colors.tertiary[100].concat("4a")};
 	}

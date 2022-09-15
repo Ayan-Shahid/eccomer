@@ -9,6 +9,11 @@ export const Wrapper = styled.section`
 	flex: none;
 	height: 100%;
 	border-radius: 0.5rem;
+	@media screen and (max-width: 740px) {
+		width: 91%;
+		margin-top: 2rem;
+		margin-right: 0;
+	}
 	flex-direction: column;
 	.paymentMethodCard {
 		cursor: pointer;
@@ -103,6 +108,9 @@ export const Heading = styled.h5`
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	margin: 0;
 	user-select: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.lg};
+	}
 `;
 
 export const Row = styled.article`
@@ -119,6 +127,9 @@ export const Title = styled.h6`
 	color: ${({ theme: { colors } }) => colors.tertiary[100]};
 	margin: 0;
 	user-select: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.md};
+	}
 `;
 export const Text = styled.p`
 	font-size: ${({ theme: { fonts } }) => fonts.md};
@@ -126,4 +137,7 @@ export const Text = styled.p`
 	margin: 0;
 	font-weight: 300;
 	user-select: none;
+	@media screen and (max-width: 740px) {
+		font-size: ${({ theme: { fonts } }) => fonts.sm};
+	}
 `;
